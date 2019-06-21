@@ -1,0 +1,7 @@
+Run the following commands, upon successfull execution the following commands generate a shared object file named libpowerusb.so, load this file in the respective applications and call the PowerUSB API functions as explained in README file
+
+-------------------------------------------------------------------------------------------
+gcc -fPIC -Wall -g -c `pkg-config libusb-1.0 --cflags` *.c
+g++ -fPIC -Wall -g -c `pkg-config libusb-1.0 --cflags` *.cpp
+g++ -shared -Wl,-soname,libpowerusb.so -o libpowerusb.so PwrUSBHid.o PwrUSBImp.o -lc
+-------------------------------------------------------------------------------------------
