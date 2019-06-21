@@ -1,14 +1,13 @@
-add_executable(pipelog main.cpp)
+cmake_minimum_required (VERSION 2.8)
+project (pipelog)
 
-#find_package(libusb-1.0-0 REQUIRED)
-#find_package(PkgConfig REQUIRED)
-#pkg_search_module(LIBUSB1 REQUIRED libusb-1.0)
-#include_directories(SYSTEM ${LIBUSB1_INCLUDE_DIRS})
-
-
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 find_package(PkgConfig REQUIRED)
 pkg_search_module(USB_LIB REQUIRED libusb-1.0)
 
-target_link_libraries(pipelog ${USB_LIB} ${CMAKE_CURRENT_SOURCE_DIR}/libhid.so  ${CMAKE_CURRENT_SOURCE_DIR}/libpowerusb.so ${CMAKE_DL_LIBS} )
+link_directories(${CMAKE_PREFIX_PATH}/lib/lib/64bit)
+
+add_executable(pipelog main.cpp)
+target_link_libraries(pipelog ${USB_LIB} hid  powerusb dl)
 
 install(TARGETS pipelog DESTINATION bin)

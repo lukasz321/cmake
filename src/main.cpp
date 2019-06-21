@@ -19,7 +19,7 @@ int port31 = 0, port32 = 0, port33 = 1;
 
 int main(int argc, char *argv[]) 
 {
-    sharedLibraryHandle = dlopen ("./lib/64bit/libpowerusb.so", RTLD_LAZY);
+    sharedLibraryHandle = dlopen ("libpowerusb.so", RTLD_LAZY);
 				if (!sharedLibraryHandle) 
 				{
 				    fputs (dlerror(), stderr);

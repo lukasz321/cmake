@@ -1,10 +1,16 @@
-# build
-mkdir build   
-cd build   
-cmake ..  
-make
+# Ubuntu 18.04 environment setup
+```bash
+sudo apt-get install git build-essential cmake
+```
 
-cd ./src   
-(now copy the lib folder from src to exec directory)    
-cp -r ../../src/lib .   
-./pipelog  
+# build
+```bash
+make build
+```
+
+# run
+```bash
+make run
+```
+
+
