@@ -7,7 +7,7 @@ build: clean
 	mkdir -p $(BUILD.DIR)
 	mkdir -p $(INSTALLED.HOST.DIR)/lib
 	cp $(SOURCE.DIR)/lib/64bit/lib* $(INSTALLED.HOST.DIR)/lib
-	cd $(BUILD.DIR) && cmake -DCMAKE_PREFIX_PATH=$(INSTALLED.HOST.DIR)/lib $(SOURCE.DIR)  && make install
+	cd $(BUILD.DIR) && cmake -DCMAKE_PREFIX_PATH=$(INSTALLED.HOST.DIR) $(SOURCE.DIR)  && make install
 
 
 run: .FORCE
