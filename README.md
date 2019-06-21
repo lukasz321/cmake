@@ -4,12 +4,13 @@ sudo apt-get install git build-essential cmake
 ```
 
 # build
-mkdir build   
-cd build   
-cmake ..  
-make
+```bash
+make build
+```
 
-cd ./src   
-(now copy the lib folder from src to exec directory)    
-cp -r ../../src/lib .   
-./pipelog  
+# run
+```bash
+make run
+```
+
+
