@@ -1,0 +1,1 @@
+sudo cp 99* /etc/udev/rules.d/ 
