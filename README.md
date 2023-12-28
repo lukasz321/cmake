@@ -1,7 +1,7 @@
 ## powerusb
 A very simple wrapper for controlling PwrUSB on a repeating schedule.
 
-See `https://pwrusb.com`
+See https://pwrusb.com
 
 ## requirements
 ```sh
